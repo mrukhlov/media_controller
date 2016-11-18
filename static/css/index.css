@@ -1,0 +1,26 @@
+body {
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 623px;
+    height: 550px;
+    align-content: center;
+    /*border:1px solid;*/
+    border-color: #ADADAD;
+    -webkit-border-radius: 0.5%;
+    -moz-border-radius: 0.5%;
+    border-radius: 0.5%;;
+    padding: 10px;
+}
+
+.vidya {
+    margin: 0 auto;
+}
+
+#request {
+    width: 300px;
+}

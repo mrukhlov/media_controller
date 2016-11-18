@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+    <body>
+    <div class="wrapper">
+        <div class="apiai">
+            <div class="section">
+                Input:
+                <input type="text" id="request">
+                <button id="send_button" class="btn btn-default">Send</button>
+            </div>
+            <p class="response">Hi, i'm your media player. Ask me anything.</p>
+        </div>
+        <div class="vidya">
+            <div id="video-placeholder"></div>
+            <div class="controls">
+                <button id="render" class="btn btn-default">Render</button>
+                <button id="play" class="btn btn-default">Play</button>
+                <button id="pause" class="btn btn-default">Stop</button>
+                <button id="next" class="btn btn-default">Next</button>
+                <button id="minus" class="btn btn-default">10 sec backward</button>
+                <button id="plus" class="btn btn-default">10 sec forward</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../static/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../static/js/youtube.js"></script>
+    </body>
+</html>
