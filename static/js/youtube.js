@@ -120,7 +120,6 @@ function request_to_api(){
                             renderPlayer()
                         }
                     }
-                    var ytplayer = document.getElementById("video-placeholder");
                     break;
                 case 'media_control.play':
                     player.playVideo();
