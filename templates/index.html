@@ -64,6 +64,10 @@
                 recognition.lang = "en-US";
                 recognition.start();
 
+                recognition.onaudiostart = function (e) {
+                    console.log('audio started')
+                };
+
                 recognition.onresult = function (e) {
                     var result = e.results[0][0].transcript;
                     console.log(result);
@@ -81,7 +85,15 @@
                     //recognition.stop();
                     console.log('recognition error');
                     startDictation();
-                }
+                };
+
+                recognition.onsoundend = function (e) {
+                    console.log('sound ended')
+                };
+
+                recognition.onend = function (e) {
+                    console.log('disconnected')
+                };
             }
         }
         startDictation()
