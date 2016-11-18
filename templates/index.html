@@ -34,5 +34,57 @@
     <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script type="text/javascript" src="../static/js/youtube.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+
+    <script>
+        /*if (annyang) {
+            annyang.start({ autoRestart: false });
+
+            annyang.addCallback('start', function(){
+                console.log('started');
+                console.log(annyang.isListening());
+                annyang.debug([newState=true]);
+                annyang.addCallback('result', function(string){console.log(string);});
+                annyang.addCallback('resultNoMatch', function(string){console.log(string);});
+                annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
+                    console.log(userSaid); // sample output: 'hello'
+                    console.log(commandText); // sample output: 'hello (there)'
+                    console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+                })
+            });
+        }*/
+        function startDictation() {
+            if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+                var recognition = new webkitSpeechRecognition();
+
+                recognition.continuous = false;
+                recognition.interimResults = false;
+
+                recognition.lang = "en-US";
+                recognition.start();
+
+                recognition.onresult = function (e) {
+                    var result = e.results[0][0].transcript;
+                    console.log(result);
+                    if (result != 'turn off'){
+                        $('#request').val(result);
+                        request_to_api();
+                        $('#request').val(result);
+                        startDictation();
+                    } else {
+                        recognition.stop();
+                    }
+                };
+
+                recognition.onerror = function (e) {
+                    //recognition.stop();
+                    console.log('recognition error');
+                    startDictation();
+                }
+            }
+        }
+        startDictation()
+        </script>
     </body>
 </html>
