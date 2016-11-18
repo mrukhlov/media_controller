@@ -15,7 +15,7 @@ function renderPlayer(){
         playerVars: {
             color: 'white',
             playlist: 'WnPahoXwWJ8,fGl1ItUFPaU,PL72Tyxe1rc,kuoFiIFkdAA',
-            controls: 0,
+            //controls: 0,
         },
         events : {
             'onReady': onPlayerReady,
