@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 
 import os
-
+import random
+import json
 from flask import (
-	Flask,
-	render_template
+    Flask,
+    request,
+    make_response,
+    jsonify,
+    render_template
 )
-
 app = Flask(__name__)
 log = app.logger
 
