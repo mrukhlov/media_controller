@@ -54,6 +54,7 @@ function startDictation() {
                 console.log('disconnected');
                 console.log(e);
                 document.getElementById("onair_button").className = "btn btn-default";
+                //recognition.start();
             };
 
             recognition.onnomatch = function (e) {
@@ -64,7 +65,7 @@ function startDictation() {
     }
 }
 
-startDictation()
+startDictation();
 
 
     // Opera 8.0+
