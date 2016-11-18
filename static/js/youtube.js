@@ -113,9 +113,14 @@ function request_to_api(){
             $('p').html(data.result.fulfillment.speech);
             switch (data.result.action) {
                 case 'music.play':
-                    if (data.result.parameters.artist == 'Nine Inch Nails'){
-                        renderPlayer()
+                    var ytplayer = document.getElementById("video-placeholder");
+                    if (ytplayer.tagName == 'DIV'){
+                        console.log('i w0rk');
+                        if (data.result.parameters.artist == 'Nine Inch Nails'){
+                            renderPlayer()
+                        }
                     }
+                    var ytplayer = document.getElementById("video-placeholder");
                     break;
                 case 'media_control.play':
                     player.playVideo();
