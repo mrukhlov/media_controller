@@ -73,12 +73,14 @@
         }
 
         function checkSTT(){
-            if (annyang.isListening() == false) {
-                annyang.start({ autoRestart: true });
-                document.getElementById("onair_button").className = "btn btn-danger";
-            } else {
-                annyang.abort();
-                document.getElementById("onair_button").className = "btn btn-default";
+            if (navigator.userAgent.match(/Vivaldi/) == null) {
+                if (annyang.isListening() == false) {
+                    annyang.start({autoRestart: true});
+                    document.getElementById("onair_button").className = "btn btn-danger";
+                } else {
+                    annyang.abort();
+                    document.getElementById("onair_button").className = "btn btn-default";
+                }
             }
         }
         </script>
