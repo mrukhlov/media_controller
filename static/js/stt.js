@@ -2,7 +2,7 @@
  * Created by s4d_panda on 18-Nov-16.
  */
 
-/*function startDictation() {
+function startDictation() {
     if (navigator.userAgent.match(/Vivaldi/) == null) {
         if (window.hasOwnProperty('webkitSpeechRecognition')) {
 
@@ -64,7 +64,7 @@
     }
 }
 
-startDictation()*/
+startDictation()
 
 
     // Opera 8.0+
