@@ -6,7 +6,8 @@ body {
 .wrapper {
     margin: 0 auto;
     margin-top: 20px;
-    width: 623px;
+    /*width: 623px;*/
+    width: 34.4%;
     height: 550px;
     align-content: center;
     /*border:1px solid;*/
