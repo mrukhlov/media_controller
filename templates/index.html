@@ -14,8 +14,8 @@
                 Input:
                 <input type="text" id="request" autofocus>
                 <button id="send_button" class="btn btn-default">Send</button>
-                <!--<button id="onair_button" class="btn btn-default" onclick="startDictation()">On Air</button>-->
-                <button id="onair_button" class="btn btn-default" onclick="checkSTT()" data-toggle="tooltip" title="Click me or say 'Turn off' to control Speech to text" data-placement="right">On Air</button>
+                <button id="onair_button" class="btn btn-default" onclick="startDictation()" data-toggle="tooltip" title="Click me or say 'Turn off' to control Speech to text" data-placement="right">On Air</button>
+                <!--<button id="onair_button" class="btn btn-default" onclick="checkSTT()" data-toggle="tooltip" title="Click me or say 'Turn off' to control Speech to text" data-placement="right">On Air</button>-->
             </div>
             <p class="response">Hi, i'm your media player. Ask me anything. (You can run me with "Play" command)</p>
         </div>
@@ -36,10 +36,10 @@
     <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script type="text/javascript" src="../static/js/youtube.js"></script>
-    <!--<script type="text/javascript" src="../static/js/stt.js"></script>-->
+    <script type="text/javascript" src="../static/js/stt.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
 
-    <script>
+    <!--<script>
         $('[data-toggle="tooltip"]').tooltip();
         if (navigator.userAgent.match(/Vivaldi/) == null) {
             if (annyang) {
@@ -83,6 +83,6 @@
                 }
             }
         }
-        </script>
+        </script>-->
     </body>
 </html>
