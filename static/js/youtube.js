@@ -97,7 +97,7 @@ function request_to_api(){
     var request = $('#request').val();
     if (request == 'play') {request = 'play Terrible Lie by Nine Inch Nails'};
     $('#request').val('');
-    var bearer = 'Bearer beb7d0fee0d74e40b433198c861e9d9a';
+    var bearer = 'Bearer 8d6eb9c75c774457a00ff96fc6b5c147';
     $.ajax({
         headers: {'Authorization': bearer},
         url: "https://api.api.ai/api/query?v=20150910",
